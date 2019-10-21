@@ -45,4 +45,5 @@ def most_frequent
   puts result
 end
 
+most_frequent
 end
