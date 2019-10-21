@@ -41,9 +41,13 @@ def worst_tipper
 end
 
 def most_frequent
-  most_frequent_cust = meals.group_by{|customer| customer}.each{|customer, meals| result[meals] = values.size}
-  puts result
+  most_frequent_cust = meals.group_by do|customer| 
+    customer.each do |customer, meals|
+       result[customer] = values.size
+       puts result
+    end
+  end
 end
 
-most_frequent
+
 end
