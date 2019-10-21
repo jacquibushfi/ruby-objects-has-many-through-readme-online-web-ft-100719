@@ -44,3 +44,5 @@ def most_frequent
   most_frequent_cust = meals.group_by{|customer| customer}.each{|customer, meals| result[meals] = values.size}
   puts result
 end
+
+
